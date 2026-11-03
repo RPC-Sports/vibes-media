@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VIBE'D — independent NBA news, rumors, trade scenarios and analysis.">
+  <title>VIBE'D | NBA News & Trade Talk</title>
+  <style>
+    :root{--bg:#080808;--panel:#121212;--panel2:#191919;--line:#292929;--gold:#d6a52f;--gold2:#f0c65e;--muted:#a5a5a5;--white:#f5f5f5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(8,8,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;min-width:145px}.brand img{width:145px;height:58px;object-fit:contain;object-position:left center}
+    nav{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}nav a{color:#ddd;transition:.2s}nav a:hover,.active{color:var(--gold2)}
+    .live{font-size:11px;color:var(--gold2);border:1px solid #70551b;padding:7px 10px;border-radius:3px;letter-spacing:.12em;font-weight:800}
+    .ticker{border-bottom:1px solid var(--line);background:#0e0e0e}.ticker .wrap{display:flex;gap:14px;align-items:center;min-height:38px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.ticker b{color:var(--gold2)}.ticker span{color:#bbb}
+    .hero{padding:38px 0 26px;display:grid;grid-template-columns:1.55fr 1fr;gap:18px}.feature{min-height:390px;position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#292216,#111 55%,#080808);display:flex;align-items:end;padding:30px}.feature:before{content:'V';position:absolute;right:8%;top:-90px;font-size:430px;font-weight:900;font-style:italic;color:rgba(214,165,47,.07);line-height:1}.feature-content{position:relative;max-width:620px}.eyebrow{color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.feature h1{font-size:clamp(32px,5vw,56px);line-height:1.02;margin:12px 0}.feature p{color:#c5c5c5;max-width:520px;margin:0 0 20px}.btn{display:inline-block;background:var(--gold);color:#090909;padding:11px 16px;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;border-radius:2px}
+    .side-stack{display:grid;gap:18px}.side-card{border:1px solid var(--line);background:var(--panel);padding:22px;display:flex;flex-direction:column;justify-content:end;min-height:185px;position:relative;overflow:hidden}.side-card:after{content:'';position:absolute;width:160px;height:160px;border:1px solid rgba(214,165,47,.22);border-radius:50%;right:-45px;top:-50px;box-shadow:0 0 0 18px rgba(214,165,47,.035),0 0 0 38px rgba(214,165,47,.025)}.side-card h2{position:relative;font-size:23px;line-height:1.12;margin:9px 0 0;max-width:300px}.section{padding:20px 0 38px}.section-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}.section-head h2{font-size:18px;letter-spacing:.08em;text-transform:uppercase;margin:0}.section-head h2:before{content:'';display:inline-block;width:4px;height:17px;background:var(--gold);margin-right:10px;vertical-align:-3px}.section-head a{font-size:11px;color:var(--gold2);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.story{background:var(--panel);border:1px solid var(--line);min-height:205px;padding:20px;transition:.2s}.story:hover{border-color:#8d6a24;transform:translateY(-2px)}.tag{color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.story h3{font-size:19px;line-height:1.2;margin:12px 0 10px}.story p{color:var(--muted);font-size:13px;margin:0}.meta{font-size:10px;color:#777;margin-top:18px;text-transform:uppercase;letter-spacing:.08em}
+    .trade-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.trade{background:linear-gradient(135deg,#171717,#0d0d0d);border:1px solid var(--line);padding:22px}.trade h3{margin:8px 0;font-size:20px}.trade p{color:var(--muted);font-size:13px;margin:0}.disclaimer{color:#777;font-size:11px;margin-top:14px}
+    footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#858585;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot strong{color:var(--gold2);letter-spacing:.12em}
+    @media(max-width:760px){.nav{height:auto;min-height:72px;flex-wrap:wrap;padding:8px 0 12px}.brand img{width:120px}nav{order:3;width:100%;overflow:auto;gap:20px;padding:5px 0;font-size:11px}.live{margin-left:auto}.hero{grid-template-columns:1fr;padding-top:22px}.feature{min-height:340px;padding:22px}.side-stack{grid-template-columns:1fr 1fr}.side-card{min-height:160px;padding:16px}.side-card h2{font-size:18px}.cards{grid-template-columns:1fr}.trade-grid{grid-template-columns:1fr}.foot{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav">
+    <a class="brand" href="#home" aria-label="VIBE'D home"><img src="assets/vibed-logo.png" alt="VIBE'D logo"></a>
+    <nav aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#news">NBA News</a><a href="#rumors">Rumors</a><a href="#trades">Trade Center</a></nav>
+    <span class="live">INDEPENDENT NBA MEDIA</span>
+  </div></header>
+  <div class="ticker"><div class="wrap"><b>VIBE'D</b><span>NBA news · rumors · trade scenarios · analysis</span></div></div>
+  <main id="home" class="wrap">
+    <section class="hero" aria-label="Featured stories">
+      <article class="feature"><div class="feature-content"><div class="eyebrow">The VIBE'D tip-off · Homepage preview</div><h1>THE NBA NEVER<br>STOPS MOVING.</h1><p>News, rumors and trade conversations — with a fresh perspective on everything happening around the league.</p><a class="btn" href="#news">Explore the latest</a></div></article>
+      <div class="side-stack">
+        <article class="side-card"><div class="eyebrow">Rumor tracker</div><h2>Following the stories shaping the league.</h2></article>
+        <article class="side-card"><div class="eyebrow">Trade center</div><h2>Big ideas. Realistic conversations.</h2></article>
+      </div>
+    </section>
+    <section class="section" id="news"><div class="section-head"><h2>Latest NBA News</h2><a href="#news">All coverage</a></div>
+      <div class="cards">
+        <article class="story"><div class="tag">News desk</div><h3>Your first NBA headline goes here.</h3><p>Replace this preview card with a verified report, a clear summary and a link to the original source.</p><div class="meta">Sample layout · Not a live report</div></article>
+        <article class="story"><div class="tag">Around the league</div><h3>Track the moves that matter.</h3><p>Use this space for signings, injuries, roster moves and other important league updates.</p><div class="meta">Sample layout · Not a live report</div></article>
+        <article class="story"><div class="tag">Analysis</div><h3>Go beyond the headline.</h3><p>Add context, explain what a report means and separate confirmed facts from speculation.</p><div class="meta">Sample layout · Not a live report</div></article>
+      </div>
+    </section>
+    <section class="section" id="rumors"><div class="section-head"><h2>Rumor Mill</h2><a href="#rumors">More rumors</a></div>
+      <div class="cards">
+        <article class="story"><div class="tag">Reported interest</div><h3>Rumor headline placeholder</h3><p>Identify who reported it, when it was reported and whether the teams have confirmed anything.</p><div class="meta">Always credit the original reporter</div></article>
+        <article class="story"><div class="tag">What we're watching</div><h3>Keep an eye on the market.</h3><p>Use this card for developing stories, clearly labeled as unconfirmed when appropriate.</p><div class="meta">Editorial watchlist</div></article>
+        <article class="story"><div class="tag">League notes</div><h3>Connect the dots carefully.</h3><p>Explain the difference between a team's interest, exploratory talks and an actual offer.</p><div class="meta">Editorial explainer</div></article>
+      </div>
+    </section>
+    <section class="section" id="trades"><div class="section-head"><h2>Trade Center</h2><a href="#trades">Explore scenarios</a></div>
+      <div class="trade-grid">
+        <article class="trade"><div class="tag">Trade scenario</div><h3>Build a hypothetical trade.</h3><p>Show the teams, players and draft assets involved, then explain why each side might consider it.</p><div class="disclaimer">Hypothetical proposals must be labeled as VIBE'D scenarios — not reported negotiations.</div></article>
+        <article class="trade"><div class="tag">Trade breakdown</div><h3>Who says yes — and why?</h3><p>Break down roster fit, salary rules, team direction and the basketball reasons behind a proposed deal.</p><div class="disclaimer">Check current contract and transaction details before publishing.</div></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><div><strong>VIBE'D</strong><div>Independent NBA media.</div></div><div>© 2026 VIBE'D · Built for basketball conversations.</div></div></footer>
+</body>
+</html>
